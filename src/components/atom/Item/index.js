@@ -12,7 +12,7 @@ const Item = ({ setIsTambah, setIsUpdate, getData, setId, ...mhs }) => {
                 {
                     text: "Ya",
                     onPress: () => {
-                        axios.delete(`http://192.168.43.203:4000/mhs/${mhs._id}`)
+                        axios.delete(`https://mern-mhs-api-badruti94.vercel.app/mhs/${mhs._id}`)
                             .then(data => {
                                 getData()
                             })
@@ -36,7 +36,7 @@ const Item = ({ setIsTambah, setIsUpdate, getData, setId, ...mhs }) => {
     return (
         <View style={styles.itemWrapper} >
             <View >
-                <Image style={styles.img} source={{ uri: `http://192.168.43.203:4000/public/assets/images/${mhs.foto}` }} />
+                <Image style={styles.img} source={{ uri: `https://mern-mhs-api-badruti94.vercel.app/public/assets/images/${mhs.foto}` }} />
             </View>
             <View style={styles.infoWrapper} >
                 <View>
